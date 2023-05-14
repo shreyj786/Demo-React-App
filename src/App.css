@@ -1,38 +1,59 @@
-.App {
-  text-align: center;
+.iconSize {
+  width: 25px;
+  height: 25px;
+  color: #fff;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.marginRight {
+  margin-right: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.text-decoration-none {
+  text-decoration: none;
+  font-weight: 400;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.hero-bg {
+  background-color: #326273;
+}
+/* Project Page Style */
+.hero-title {
+  font-size: 30px;
+  font-weight: 500;
+  color: #fff;
 }
 
-.App-link {
-  color: #61dafb;
+.image-style {
+  width: 100px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: fill;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.bg-project {
+  background-color: #1b998b;
+}
+
+.project-image {
+  height: 30vh; /* You must set a specified height */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: contain; /* Resize the background image to cover the entire container */
+  border-radius: 5px;
+}
+
+.see-more-margin {
+  margin: 0;
+  margin-right: 10px;
+}
+
+
+/* Contact Us Page Style */
+.contact-bg {
+  background-color: #2f3061;
+  height: 100vh;
+}
+
+.m-0{
+  margin:0;
 }
