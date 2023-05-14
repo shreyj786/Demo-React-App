@@ -1,59 +1,699 @@
-.iconSize {
-  width: 25px;
-  height: 25px;
-  color: #fff;
-}
+@import url('https://fonts.googleapis.com/css2?family=Markazi+Text:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Karla&display=swap');
 
-.marginRight {
-  margin-right: 20px;
-}
 
-.text-decoration-none {
-  text-decoration: none;
-  font-weight: 400;
-}
 
-.hero-bg {
-  background-color: #326273;
-}
-/* Project Page Style */
-.hero-title {
-  font-size: 30px;
-  font-weight: 500;
-  color: #fff;
-}
 
-.image-style {
-  width: 100px;
-  height: 120px;
-  border-radius: 50%;
-  object-fit: fill;
-}
-
-.bg-project {
-  background-color: #1b998b;
-}
-
-.project-image {
-  height: 30vh; /* You must set a specified height */
-  background-position: center; /* Center the image */
-  background-repeat: no-repeat; /* Do not repeat the image */
-  background-size: contain; /* Resize the background image to cover the entire container */
-  border-radius: 5px;
-}
-
-.see-more-margin {
+* {
   margin: 0;
-  margin-right: 10px;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-
-/* Contact Us Page Style */
-.contact-bg {
-  background-color: #2f3061;
+body {
   height: 100vh;
 }
 
-.m-0{
-  margin:0;
+/* scrollbar  */
+::-webkit-scrollbar {
+  width: 0.7em;
+}
+
+::-webkit-scrollbar-thumb {
+  background-image: linear-gradient(180deg, #ffff, var(--primary-blue));
+  border-radius: 1px;
+}
+
+/* progress Bar  */
+
+.progress {
+  width: 100%;
+  height: 5px;
+  z-index: 1050
+}
+
+.bar {
+  height: inherit;
+  background-image: linear-gradient(90deg, var(--white), var(--primary-blue));
+}
+
+/* progress Bar  */
+
+
+/* button */
+.main-btn {
+  padding: 0.5rem 0.9rem;
+  color: var(--primary-blue);
+  background-color: var(--primary-yellow);
+  font-family: var(--secondary-font);
+  letter-spacing: 1.25px;
+  border: 3px solid var(--primary-yellow);
+  border-radius: 2px;
+  transition: all 0.3s ease-in 0s;
+  -webkit-transition: all 0.3s ease-in 0s;
+  -moz-transition: all 0.3s ease-in 0s;
+  -o-transition: all 0.3s ease-in 0s;
+  font-weight: 1000;
+  font-size: 0.9rem;
+  line-height: 0.9rem;
+  display: inline-block;
+  box-shadow: 0 1px 3px gray;
+
+}
+
+
+.secondary-btn {
+  padding: 0.5rem 0.9rem;
+  color: var(--primary-yellow);
+  background-color: transparent;
+  font-family: var(--secondary-font);
+  letter-spacing: 1.25px;
+  border: 3px solid var(--primary-yellow);
+  border-radius: 2px;
+  transition: all 0.3s ease-in 0s;
+  -webkit-transition: all 0.3s ease-in 0s;
+  -moz-transition: all 0.3s ease-in 0s;
+  -o-transition: all 0.3s ease-in 0s;
+  font-weight: 1000;
+  font-size: 0.9rem;
+  line-height: 0.9rem;
+  display: inline-block;
+  box-shadow: 0 1px 3px gray;
+
+}
+
+button:active:not(:disabled) {
+  background-color: black;
+}
+
+button:disabled {
+  opacity: 0.7;
+}
+
+#cancel-btn {
+  cursor: pointer;
+}
+
+#cancel-btn:hover {
+  color: red;
+  font-weight: 600;
+}
+
+button:disabled {
+  box-shadow: unset
+}
+
+/* button */
+
+/* custom css */
+:root {
+
+  --primary-font: 'Markazi Text', serif;
+  --secondary-font: 'Karla', sans-serif;
+  --tertiary-font: 'Courgette', cursive;
+  --primary-blue: #495E57;
+  --primary-yellow: #F4CE14;
+  --secondary-one: #EE9972;
+  --secondary-second: #FBDABB;
+  --highlight-first: #EDEFEE;
+  --highlight-second: #333333;
+  --white: #FFFFFF;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  text-transform: capitalize;
+  font-size: 1.3rem;
+  font-weight: 500;
+  font-family: var(--primary-font);
+  color: var(--primary-blue);
+}
+
+.navbar a {
+  font-size: 1.3rem;
+}
+
+a:hover:not(footer a, #login-popup a, #login-page a, #section-nav-parent ul.nav a),
+a.active:not(footer a, #login-popup a, #login-page a, #section-nav-parent ul.nav a) {
+  color: var(--primary-yellow) !important;
+
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: 900;
+  line-height: 2.7rem;
+  letter-spacing: 2px;
+  font-family: var(--primary-font);
+  color: var(--primary-yellow);
+  text-transform: capitalize;
+}
+
+h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 2.5rem;
+  letter-spacing: 1.8px;
+  font-family: var(--primary-font);
+  color: var(--highlight-first);
+  text-transform: capitalize;
+}
+
+h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  line-height: 1rem;
+  letter-spacing: 1px;
+  font-family: var(--secondary-font);
+  color: var(--primary-blue);
+  text-transform: capitalize;
+}
+
+h4 {
+  font-size: 1.9rem;
+  font-weight: 600;
+  line-height: 2rem;
+  font-family: var(--primary-font);
+  color: var(--primary-blue);
+  text-transform: capitalize;
+  text-decoration: underline;
+}
+
+h5 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 1.3rem;
+  font-family: var(--primary-font);
+  color: var(--highlight-second);
+  text-transform: capitalize;
+}
+
+p {
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.2rem;
+  letter-spacing: 0.7px;
+  font-family: var(--secondary-font);
+  color: var(--primary-blue);
+  text-transform: capitalize;
+}
+
+/* custom css */
+
+
+header {
+  background-color: var(--white);
+}
+
+header img {
+  width: 180px;
+}
+
+/* footer  */
+footer {
+  background-color: ghostwhite;
+}
+
+footer a {
+  font-size: 1.1rem;
+  text-decoration: underline !important;
+  padding: 0;
+}
+
+footer p {
+  font-size: 0.89rem;
+}
+
+#brand,
+#footer_icon {
+  height: 3.5rem;
+}
+
+/* footer  */
+#navbar_toggler {
+  outline: unset;
+  box-shadow: unset;
+}
+
+/* user image  */
+#user_img {
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+}
+
+.users-img {
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+
+}
+
+/* user image  */
+/* login-popup  */
+#login-popup {
+  position: absolute;
+  top: 4.5rem;
+  right: 0.8rem;
+  z-index: 10;
+  background-color: var(--white);
+  width: 250px;
+  box-shadow: 0 0 8px black;
+  border-radius: 5px;
+}
+
+#login-popup a {
+  color: blue;
+}
+
+#login-popup-header {
+  background-color: var(--primary-blue);
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+}
+
+#login-popup-header p {
+  color: var(--highlight-first)
+}
+
+#login-popup #cancel-popup {
+  cursor: pointer;
+}
+
+/* login-popup */
+
+/* cart  */
+#cart_parent {
+  position: relative;
+}
+
+#cart {
+  color: var(--primary-blue);
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+#cart-counter {
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(50%, -50%);
+  background-color: var(--primary-yellow);
+  padding: 0.2rem 0.35rem;
+  border-radius: 4px;
+  font-weight: 900;
+  z-index: -1;
+}
+
+p.cart-price {
+  font-size: 0.9rem;
+  color: var(--primary-yellow)
+}
+
+.heading {
+  background-color: var(--primary-blue);
+}
+
+.heading h5 {
+  color: var(--highlight-first);
+}
+
+.offcanvas-title img {
+  width: 150px
+}
+
+.offcanvas-body h4 {
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.billing-details h5 {
+  color: var(--primary-blue)
+}
+
+.offcanvas-body .quantity button {
+  padding: 0.2rem 0.5rem;
+}
+
+/* cart  */
+
+/* banner */
+.banner {
+  background-color: var(--primary-blue);
+}
+
+.banner p {
+  color: var(--highlight-first);
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.banner img {
+  border-radius: 0.5rem;
+}
+
+.banner button.main-btn,
+.banner button.secondary-btn {
+  padding: 0.7rem 1.8rem;
+}
+
+/* banner */
+
+/* Highlight */
+.highlight img {
+  border-radius: 12px;
+}
+
+.highlight h5.price {
+  color: var(--secondary-one);
+}
+
+.highlight h5 {
+  display: inline-block;
+}
+
+.highlight a,
+#orderOnlineSection a {
+  color: var(--primary-yellow);
+}
+
+/* Highlight */
+
+/* carouse */
+.carousel {
+  background-color: var(--primary-blue);
+  padding: 2rem 2.8rem;
+  border-radius: 15px;
+}
+
+.carousel h5 {
+  color: var(--primary-yellow)
+}
+
+.carousel p {
+  color: var(--highlight-first);
+}
+
+.carousel img {
+  width: 65px;
+  border-radius: 50%;
+}
+
+.carousel-indicators [data-bs-target] {
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  margin-right: 4.5px;
+  margin-left: 4.5px;
+}
+
+/* carouse */
+
+/* parallax */
+
+#parallax {
+  background-image: url(./Assets/parallax_5.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: 0 10%;
+  padding: 2.5rem 0;
+}
+
+#parallax h5 {
+  color: var(--highlight-first)
+}
+
+/* offcanvas */
+.offcanvas {
+  z-index: 1100;
+}
+
+/* offcanvas */
+
+#parallax a {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/* parallax */
+
+/* secondary-btn in .highlight  */
+.highlight .secondary-btn {
+  margin-left: 0;
+  margin-top: 1rem;
+}
+
+/* secondary-btn in .highlight  */
+
+/* login-header  */
+#login-page .fs {
+  font-size: 1.5rem;
+}
+
+/* login-header  */
+
+/* toast */
+.toast.show {
+  position: absolute;
+  left: 50%;
+  top: calc(50vh);
+  background-color: white;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+/* toast */
+
+/* my-account */
+#account-dp {
+  width: calc(10vw);
+  height: calc(10vw)
+}
+
+#user-account h4,
+#orderOnlineSection h4 {
+  text-decoration: none;
+}
+
+#user-account p,
+#orderOnlineSection p {
+  word-wrap: break-word;
+}
+
+#user-account .details {
+  background-image: linear-gradient(160deg, var(--white), var(--white), var(--white), var(--primary-blue));
+}
+
+/* my-account */
+
+/* order Online */
+.orderSummary {
+  background-image: url(./Assets/lemon-bg.jpg);
+  background-repeat: no-repeat;
+  background-position: 35% 5%;
+}
+
+
+/* reservation form  */
+form {
+  font-family: var(--secondary-font);
+  font-weight: 500;
+}
+
+/* reservation form  */
+/* input-banner */
+#input-banner {
+  box-shadow: 0 0 3px;
+}
+
+#input-banner-container .reservation-heading {
+  font-size: 1.7rem;
+  font-weight: 600;
+  line-height: 2.2rem;
+  font-family: var(--tertiary-font);
+  color: var(--primary-blue);
+  text-transform: capitalize;
+  letter-spacing: 1.5px;
+}
+
+#input-banner-container p:not(.modal p) {
+  font-family: var(--tertiary-font);
+}
+
+#input-banner-container p::first-letter:not(.modal p) {
+  font-weight: 600;
+}
+
+#input-banner-container #logo {
+  width: calc(6rem + 10vh);
+}
+
+/* input-banner */
+/* menu  */
+
+#menu-logo {
+  width: calc(2rem + 10vh);
+}
+
+#cat-logo {
+  width: calc(2rem + 6vh);
+}
+
+.welcome-para {
+  font-family: var(--tertiary-font);
+  font-size: 0.8rem;
+  line-height: 1rem;
+}
+
+
+#section-nav-parent ul.nav {
+  position: absolute;
+  bottom: 0%;
+  background-color: #fff;
+  box-shadow: 0 0 8px;
+}
+
+#section-nav-parent ul.nav a {
+  color: var(--primary-blue)
+}
+
+#section-nav-parent {
+  position: fixed;
+  bottom: 6%;
+  right: -90%;
+  z-index: 1;
+}
+
+/* menu  */
+
+/* about */
+#aboutBanner h3 {
+  font-size: 4.7rem;
+  font-weight: 900;
+  line-height: 4rem;
+  letter-spacing: 2px;
+  font-family: var(--primary-font);
+  color: var(--primary-blue);
+  text-transform: capitalize;
+  text-shadow: 0px 1px 3px;
+}
+
+#aboutBanner{
+  background-image: url(./Assets/lemons-bg.jpg);
+  background-position: 70% 38%;
+}
+
+#gallery{
+  background-color: ghostwhite;
+}
+
+.service-icon{
+  background-color: var(--primary-blue);
+  color:#fff;
+}
+/* about */
+/* order Online */
+@media(min-width:768px) {
+  header img {
+    width: 250px;
+  }
+
+  #brand,
+  #footer_icon {
+    height: 4rem;
+  }
+
+  h1 {
+    font-size: 3.5rem;
+    line-height: 3rem;
+  }
+
+  h2 {
+    font-size: 2.2rem;
+    line-height: 2rem;
+  }
+
+  /* banner-input */
+  #input-banner {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  #input-banner #first {
+    padding-right: 1.5rem;
+  }
+
+  #input-banner #second {
+    padding-left: 1.5rem;
+    border-left: 1px solid #dee2e6;
+  }
+
+  /* banner-input */
+}
+
+@media(max-width:1244px){
+  #aboutBanner h3{
+    font-size:4rem ;
+    font-weight:800 ;
+    line-height:2.9rem ;
+  }
+}
+
+@media(max-width:768px) {
+  #account-dp {
+    width: calc(17vw);
+    height: calc(17vw);
+  }
+
+  #input-banner #second {
+    border-top: 1px solid #dee2e6;
+  }
+
+  #section-nav-parent {
+    right: -79%;
+    bottom: 3%;
+  }
+
+  #aboutBanner h3{
+    font-size:3.8rem ;
+    font-weight:700 ;
+    line-height:2.7rem ;
+  }
+}
+
+@media (min-width:370px) {
+  .highlight .secondary-btn {
+    margin-left: 0.8rem;
+  }
+}
+
+@media (max-width:470px) {
+  #login-page .fs-sm {
+    font-size: 0.7rem;
+  }
+
+  #login-page .fs {
+    font-size: 1.2rem;
+  }
+
+  #orderOnlineSection p {
+    font-size: 0.7rem;
+  }
+
+  #orderOnlineSection h4 {
+    font-size: 1.5rem;
+  }
+
+  #aboutBanner h3{
+    font-size:3rem ;
+    font-weight:600 ;
+    line-height:2rem ;
+  }
 }

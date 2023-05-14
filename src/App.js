@@ -1,18 +1,24 @@
-import React from 'react';
-import { Route, Routes } from 'react-router-dom';
-import Home from './pages/Home';
-import ContactUs from './pages/ContactUs';
-import Projects from './pages/Projects';
 
+import './App.css';
+import Header from './components/Header'
+import Nav from './components/Nav'
+import Main from './components/Main'
+import Footer from './components/Footer'
+import Progress from './components/Progress';
+import DataProvider from './components/DataProvide';
 
-const App = () => {
+function App() {
   return (
-      <Routes>
-        <Route path="/" element={<Home/>} exact/>
-        <Route path='/contact' element={<ContactUs/>} />
-        <Route path='/project' element={<Projects/>} />
-      </Routes>
-    
-  )
+    <>
+      <DataProvider>
+        <Header />
+        <Progress />
+        <Nav />
+        <Main />
+        <Footer />
+      </DataProvider>
+    </>
+  );
 }
-export default App
+
+export default App;
